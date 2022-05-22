@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  height: auto;
+}
+
+.main__section {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  width: "100%";
+}
+
+.main__section--primary {
+  background: #1a1c21;
+  gap: 20px;
+  position: relative;
+}
+.main__section--secondary {
+  background: #fff;
+  gap: 1rem;
+}
