@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, NotificationLabel } from "../../../components";
-import CartLayout from "./CartLayout";
+import CartLayout from "./layout";
 import CartListItem from "./CartListItem";
-import EmptyCart from "./EmptyCart";
+import EmptyCart from "./layout/EmptyCart";
 
 const Cart = (props) => {
   return (
@@ -23,7 +23,7 @@ const Cart = (props) => {
             items: props.highPriceProducts.data.map((item) => (
               <CartListItem key={`${item.id}`} {...item} />
             )),
-            notificacaoFreteGratis: props.freeShipping && (
+            notificacaoFreteGratis: (
               <NotificationLabel>
                 Parabéns, sua compra tem frete grátis!
               </NotificationLabel>

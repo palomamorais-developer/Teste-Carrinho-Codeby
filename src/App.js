@@ -9,7 +9,7 @@ import Footer from "./layout/Footer";
 
 function App() {
   let total = 0;
-  const [freeShipping, setFreeShipping] = useState(false);
+  const [, setFreeShipping] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [addToCartLow, setLow] = useState(false);
   const [addToCartHigh, setHigh] = useState(false);
@@ -56,6 +56,7 @@ function App() {
   useEffect(() => {
     if (total > 10) {
       setFreeShipping(true);
+      // console.log();
     } else {
       setFreeShipping(false);
     }
@@ -91,7 +92,6 @@ function App() {
             }}
             highPriceProducts={{
               data: highPriceProducts.items,
-              freeShipping: freeShipping,
               totalPrice:
                 addToCartHigh && formattedTotalPrice(highPriceProducts.items),
             }}
